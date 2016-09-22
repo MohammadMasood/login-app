@@ -65,6 +65,10 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
+app.get('/google27285eb7ae03815d.html', function(req, res) {
+  res.sendFile(path.join(__dirname, '../client', 'google27285eb7ae03815d.html'));
+});
+
 
 // error handlers
 app.use(function(req, res, next) {
