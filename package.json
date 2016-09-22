@@ -4,7 +4,7 @@
   "version": "0.0.1",  
   "scripts": {   
 	"init": "npm install",
-    "start": "node server/server.js",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
