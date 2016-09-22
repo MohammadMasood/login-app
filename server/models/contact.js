@@ -7,7 +7,7 @@ var Contact = new Schema({
   name: String,					  
   subject: String,
   email: String,
-  mobile_no:String,
+  phone_no:String,
   message:String,
   created:Date
 });

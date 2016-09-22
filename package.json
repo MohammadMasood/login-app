@@ -1,9 +1,9 @@
 {
   "name": "mean-auth",
   "description": "Angulr Js login demo",
-  "version": "0.0.1",  
-  "scripts": {   
-	"init": "npm install",
+  "version": "0.0.1",
+  "scripts": {
+    "init": "npm install",
     "start": "node server/server.js"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "express-session": "^1.13.0",
     "mongoose": "^4.4.5",
     "morgan": "^1.7.0",
+    "nodemailer": "^2.6.4",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0"
