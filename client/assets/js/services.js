@@ -101,14 +101,14 @@ app.factory('AuthService',
         // handle success
         .success(function (data, status) {
           if(status === 200 && data.status){
-            deferred.resolve();
+            deferred.resolve(data);
           } else {
-            deferred.reject();
+            deferred.reject(data);
           }
         })
         // handle error
         .error(function (data) {
-          deferred.reject();
+          deferred.reject(data);
         });
 
       // return promise object

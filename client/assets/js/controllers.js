@@ -73,13 +73,28 @@ app.controller('logoutController',
 app.controller('registerController',
   ['$scope', '$location', 'AuthService',
   function ($scope, $location, AuthService) {
-	alert();
+	
     $scope.register = function () {
 
       // initial values
       $scope.error = false;
       $scope.disabled = true;
 
+		/*
+	  AuthService.register($scope.registerForm.username, $scope.registerForm.password)
+        // handle success
+        .then(function () {
+          $location.path('/login');
+          $scope.disabled = false;
+          $scope.registerForm = {};
+        },function(error){
+			
+          $scope.error = true;
+          $scope.errorMessage = error.err.message;
+          $scope.disabled = false;
+          $scope.registerForm = {};        		
+		})
+	  */
       // call register from service
       AuthService.register($scope.registerForm.username, $scope.registerForm.password)
         // handle success
@@ -89,9 +104,9 @@ app.controller('registerController',
           $scope.registerForm = {};
         })
         // handle error
-        .catch(function () {
+        .catch(function (error) {
           $scope.error = true;
-          $scope.errorMessage = "Something went wrong!";
+          $scope.errorMessage = error.err.message;
           $scope.disabled = false;
           $scope.registerForm = {};
         });

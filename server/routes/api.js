@@ -10,6 +10,7 @@ router.post('/register', function(req, res) {
   User.register(new User({ username: req.body.username , email: 'masood@gmail.com',created:now  }),
     req.body.password, function(err, account) {
     if (err) {
+		//console.log(err.message);
       return res.status(500).json({
         err: err
       });

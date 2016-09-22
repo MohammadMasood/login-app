@@ -34,8 +34,10 @@ app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', functio
     })
 	.state('/login', {
 		url: '/login',
-		views: {			
+		views: {	
+			header: { templateUrl: 'pages/inc/header.html'  },
 			main: { templateUrl: 'pages/login.html' },
+			footer: { templateUrl: 'pages/inc/footer.html'  },
         },
 		controller: 'loginController',
 		access: {restricted: false}
@@ -48,7 +50,9 @@ app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', functio
 	.state('/register', {
 		url: '/register',
 		views: {				
+			header: { templateUrl: 'pages/inc/header.html'  },
 			main: { templateUrl: 'pages/register.html' },
+			footer: { templateUrl: 'pages/inc/footer.html'  },
         },
 		controller: 'registerController',
 		access: {restricted: false}
