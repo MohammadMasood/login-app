@@ -10,7 +10,12 @@ var path = require('path');
 var passport = require('passport');
 var localStrategy = require('passport-local' ).Strategy;
 
-// mongoose
+/*
+	// mongoose localhost connection
+	mongoose.connect('mongodb://127.0.0.1/mean-auth');
+*/
+
+// mongoose connected to mlab online database
 mongoose.connect('mongodb://masood:password@ds147905.mlab.com:47905/mean-auth-db');
 
 // user schema/model
