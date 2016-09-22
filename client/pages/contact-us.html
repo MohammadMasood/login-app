@@ -1,0 +1,66 @@
+<div class="page-header" >
+<h1>Contact Us</h1>
+</div>
+<div class="row" ng-controller="ContactController">
+<div class="col-sm-12">
+<div class="col-sm-5" >
+
+<form method="post" id="ContactForm" name="ContactForm" class="form-horizontal" ng-submit="ContactUs()" ui-event="{reset: 'reset(ContactForm)'}">
+
+	<div class="form-group">
+		<div class="alert alert-danger" ng-show="MsgError">
+		<a class="close" href="#" data-dismiss="alert" aria-label="close">&times;</a>
+		<strong>Error!</strong> Can not send message.
+		</div>
+		
+		<div class="alert alert-success" ng-show="MsgSuccess">
+		<a class="close" href="#" data-dismiss="alert" aria-label="close">&times;</a>
+		<strong>Success!</strong> Your message has been sent.
+		</div>
+	</div>
+	
+	<div class="form-group">
+	<label>Name</label>
+	<input type="text" class="form-control" name="name" ng-model="Contact.name" required>
+	<span class="error" ng-show="ContactForm.name.$error.required && ContactForm.name.$dirty">Please Enter Name</span>
+	</div>
+	<div class="form-group">
+	<label>Subject</label>
+	<input type="text" class="form-control" name="subject" ng-model="Contact.subject" required>
+	<span class="error" ng-show="ContactForm.subject.$error.required && ContactForm.subject.$dirty">Please Enter Subject</span>
+	</div>
+	<div class="form-group">
+	<label>Email</label>
+	<input type="email" class="form-control" name="email" ng-model="Contact.email" required>
+	<span class="error" ng-show="ContactForm.email.$error.required && ContactForm.email.$dirty">Please Enter Email</span>
+	<span class="error" ng-show="ContactForm.email.$error.email">Please Enter Valid Email</span>
+	</div>
+	
+	<div class="form-group">
+	<label>Message</label>
+	<textarea type="text" class="form-control" name="message" ng-model="Contact.message" required></textarea>
+	<span class="error" ng-show="ContactForm.address.$error.required && ContactForm.address.$dirty">Please Enter Address</span>
+	</div>
+	
+	<div>
+	<button type="submit" class="btn btn-primary pull-right" ng-disabled="ContactForm.$invalid">Submit</button>
+	</div>
+  </form>			
+</div>
+<div class="col-sm-7" >
+<div class="col-sm-6 pull-right">
+<h3>Tantransh Solutions</h3>
+<p><i class="fa fa-map-marker"></i> Plot No 123 , New Society , Nagpur , 440002</p>
+<p><i class="fa fa-envelope"></i> contact@tantranshsolutions.com</p>
+<p><i class="fa fa-phone"></i> 123 456 7890 </p>
+
+</div>
+</div>
+
+<div class="row" >
+<div class="col-sm-12" style="margin-top:20px;">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.25371264231904!2d79.06689219394991!3d21.11138202017416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf78ff77e4e3%3A0xb288a7cd22893b24!2sTANTRANSH+SOLUTIONS!5e0!3m2!1sen!2sin!4v1467180646182" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>		
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="app" ng-controller="appCtrl" >
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Node Demo Project</title>
+  <!-- styles -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/ngProgress.css" rel="stylesheet">
+</head>  
+<body role="document" class="ng-cloak">
+	
+	<header ui-view="header"></header>
+	<slider ui-view="slider"></slider>	
+	<div class="container theme-showcase" role="main">
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="container">
+	<main ui-view="main"></main>	
+	</div>
+	</div> <!-- /container -->
+	
+	<div ui-view="footer" ></div>
+<!-- scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/angular/angular.min.js"></script>
+  <script src="assets/angular/angular-ui-router-min.js"></script>
+  <script src="assets/js/ngProgress.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/services/services.js"></script>
+  <script src="assets/js/controllers.js"></script>
+    
+ 
+</html>

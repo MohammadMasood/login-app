@@ -1,0 +1,58 @@
+<div ng-if="LoggedIn">
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="home">Angular Node Demo</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li ng-class="{ 'active': isActive('/' || '/home')}"><a href="home">Home</a></li>
+<li ng-class="{ 'active': isActive('/about-us')}"><a href="about-us">About Us</a></li>
+<li ng-class="{ 'active': isActive('/contact-us')}"><a href="contact-us">Contact</a></li>
+
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li ng-class="{ 'active': isActive('/dashboard')}"><a href="dashboard">Dashboard</a></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+	<li ng-controller="logoutController"><a href="javascript:;" ng-click='logout()'>Logout</a></li>
+  </ul>
+</li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+</div>
+
+<div ng-if="!LoggedIn">
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="home">Angular Node Demo</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li ng-class="{ 'active': isActive('/' || '/home')}"><a ui-sref="home">Home</a></li>
+<li ng-class="{ 'active': isActive('/about-us')}"><a ui-sref="about-us">About Us</a></li>
+<li ng-class="{ 'active': isActive('/contact-us')}"><a href="contact-us">Contact</a></li>
+<li ng-class="{ 'active': isActive('/login')}"><a href="login">Login</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+</div>
